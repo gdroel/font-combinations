@@ -15,6 +15,11 @@ class CreateCombinationsTable extends Migration {
 		Schema::create('combinations', function(Blueprint $table)
 		{
 			$table->increments('id');
+
+			$table->string('font1');
+			$table->string('font2');
+			$table->Integer('user_id');
+
 			$table->timestamps();
 		});
 	}

@@ -12,3 +12,7 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/create', 'HomeController@showCreate');
+Route::post('/create', 'HomeController@doCreate');
+

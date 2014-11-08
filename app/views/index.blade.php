@@ -1,9 +1,13 @@
 @extends('layout')
 @section('fonts')
 
-<link href='http://fonts.googleapis.com/css?family={{ $font1 }}|{{ $font2 }}' rel='stylesheet' type='text/css'>
+<link href='{{ $url }}' rel='stylesheet' type='text/css'>
+
 @section('content')
 
-<h1 style="font-family: '{{ $font1 }}' ">My dummy Title</h1>
-<p style="font-family: '{{ $font2 }}' ">I know lying is wrong, but if the elephant man came in now in a blouse with some make up on, and said "how do I look?" Would you say — bearing in mind he's depressed and has respiratory problems — would you say "go and take that blusher off you mis-shapen headed elephant tranny"? No. You'd say "You look nice... John"</p>
+@foreach($combos as $combo)
+	<h2 style="font-family: '{{$combo->font1}}' ">{{ $combo->font1 }} Look Pretty Darn Good as a Title</h2>
+	<p style="font-family: '{{$combo->font2 }}' ">{{ $combo->font2 }}All this wine nonsense! You get all these wine people, don't you? Wine this, wine that. Let's have a bit of red, let's have a bit of white. Ooh, that's a snazzy bouquet. Oh, this smells of, I don't know, basil. Sometimes you just want to say, sod all this wine, just give me a pint of, mineral water.</p>
+
+@endforeach
 @stop
