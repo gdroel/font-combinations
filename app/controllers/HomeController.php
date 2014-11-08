@@ -15,9 +15,12 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
-		return View::make('hello');
+	public function index(){
+
+		$font1 = 'Lobster';
+		$font2 = "Lato";
+
+		return View::make('index',compact('font1','font2'));
 	}
 
 }
